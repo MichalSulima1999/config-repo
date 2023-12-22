@@ -1,31 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app
+  name: fullstack_zad2-deployment
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: my-app
+      app: fullstack_zad2
   template:
     metadata:
       labels:
-        app: my-app
+        app: fullstack_zad2
     spec:
       containers:
-      - name: my-app
-        image: my-app:latest
-        ports:
-        - containerPort: 80
-        readinessProbe:
-          httpGet:
-            path: /
-            port: 80
-          initialDelaySeconds: 10
-          periodSeconds: 10
-        livenessProbe:
-          httpGet:
-            path: /
-            port: 80
-          initialDelaySeconds: 10
-          periodSeconds: 10
+        - name: fullstack_zad2-container
+          image: michael1099/fullstack_zad2:v1  # Zastąp <registry>/<username> odpowiednimi danymi
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 5
+      maxUnavailable: 2
+
