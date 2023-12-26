@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: fullstack-zad2-container
-          image: michael1099/fullstack_zad2:v1.0.9  # Zastąp <registry>/<username> odpowiednimi danymi
+          image: michael1099/fullstack_zad2:v1.0.9.0.9  # Zastąp <registry>/<username> odpowiednimi danymi
   strategy:
     type: RollingUpdate
     rollingUpdate:
