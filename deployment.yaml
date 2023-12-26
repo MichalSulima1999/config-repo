@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fullstack_zad2-deployment
+  name: fullstack-zad2-deployment
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: fullstack_zad2
+      app: fullstack-zad2
   template:
     metadata:
       labels:
-        app: fullstack_zad2
+        app: fullstack-zad2
     spec:
       containers:
-        - name: fullstack_zad2-container
+        - name: fullstack-zad2-container
           image: michael1099/fullstack_zad2:v1  # Zastąp <registry>/<username> odpowiednimi danymi
   strategy:
     type: RollingUpdate

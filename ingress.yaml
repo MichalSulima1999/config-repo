@@ -1,16 +1,16 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: fullstack_zad2
+  name: fullstack-zad2
 spec:
   rules:
-  - host: fullstack_zad2.example.com
+  - host: fullstack-zad2.example.com
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: fullstack_zad2
+            name: fullstack-zad2
             port:
               number: 80
