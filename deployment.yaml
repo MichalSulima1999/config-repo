@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: fullstack-zad2-container
-          image: michael1099/fullstack_zad2:v1.0.19
+          image: michael1099/fullstack_zad2:v1.0.20
   strategy:
     type: RollingUpdate
     rollingUpdate:
